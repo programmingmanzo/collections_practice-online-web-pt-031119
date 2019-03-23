@@ -87,7 +87,7 @@ end
 #array = ["hand", "feet", "knee", "table"]
 
 def add_s(array)
-  new_arr = []
+  #new_arr = []
   array.each_with_index.collect do |element, index|
     if index != 1 
       element + "s"
