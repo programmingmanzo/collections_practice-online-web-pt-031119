@@ -33,13 +33,38 @@ end
 
 #array = ["blake", "ashley", "scott"]
 
+# def kesha_maker(array)
+#   letter_change = []
+#   array.each do |char|
+#     letter_change << char.gsub(char[2], "$")
+#   end
+#   letter_change
+# end
+
 def kesha_maker(array)
-  letter_change = []
-  array.each do |char|
-    letter_change << char.gsub(char[2], "$")
+  array.collect do |element|
+    element[2] = ("$")
+    element
+    #binding.pry
   end
-  letter_change
 end
+
+# def kesha_maker(array)
+#   array.collect do |word| #word.delete(word[2]).insert(2, "$")}
+#   word.delete(word[2]).insert(2, "$")
+# end
+#   #binding.pry
+# end
+
+def kesha_maker(array)
+  array.collect do |x|
+    x.insert(2, "$")
+    x.delete!(x[3])
+  end
+end
+
+    
+
 
 #array = ["apple", "orange", "pear", "avis", "arlo", "ascot"]
 
